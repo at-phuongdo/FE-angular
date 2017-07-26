@@ -1,0 +1,7 @@
+<h1>MEMBERS</h1>
+<ul>
+	<li *ngFor=" let member of listMember; let id = index">
+		<span>{{member}}</span>
+		<button type="button" (click) = deleteMember(id)>Delete</button>
+	</li>
+</ul>
