@@ -19,3 +19,7 @@ th, td {
 .empty {
 	color: #cfcfcf;
 }
+
+.btn {
+  margin-top: 30px;
+}

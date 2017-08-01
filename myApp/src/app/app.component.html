@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title></title>
@@ -18,10 +18,12 @@
       </tr>
       <tr *ngFor=" let trainer of trainers">
         <td><img src="{{trainer.avatar}}" width="100px" height="100px"></td>
+        <td>[emptyImage]="trainer.avatar"</td>
         <td>{{trainer.name}}</td>
         <td>
-          <template [ngIf] ="trainer.birthday">{{trainer.birthday}}</template>
-          <template [ngIf] ="!trainer.birthday">Empty</template>
+         <p [emptyData]="trainer.birthday"></p>
+            <template [ngIf] ="trainer.birthday">{{trainer.birthday}}</template>
+            <template [ngIf] ="!trainer.birthday">Empty</template>
         </td>
         <td [ngClass]="{ red: trainer.team === 'Ruby', yellow: trainer.team === 'FE'}">
           {{trainer.team}}
@@ -32,11 +34,16 @@
 
     <div class="col-md-4" *ngIf="trainerInfo !=null ">
       <h2 class="title">Information</h2>
+      <img src="{{trainerInfo.avatar}}" width="100px" height="100px"><br/>
       <b>Name</b><p>{{trainerInfo.name}}</p>
       <b>Birthday</b><p [emptyData]="trainerInfo.birthday"></p>
-      <!-- <p>{{trainerInfo.birthday}}</p> -->
+      <p>{{trainerInfo.birthday}}</p>
       <b>Team</b><p>{{trainerInfo.team}}</p>
     </div>
   </div>
 </body>
-</html>
+</html> -->
+
+
+<app-list (myEvent)="show($event)"></app-list>
+<app-detail [i]= "i"></app-detail>

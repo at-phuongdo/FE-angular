@@ -1,0 +1,22 @@
+<table class="col-md-8">
+  <h1 class="title">List TRAINERS</h1>
+  <tr>
+    <th>Avatar</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Team</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor=" let trainer of trainers; let i = index ">
+    <!-- <td><img src="{{trainer.avatar}}" width="100px" height="100px"></td> -->
+    <td [emptyImage]="trainer.avatar" ></td>
+    <td>{{trainer.name}}</td>
+    <td>
+      <p [emptyData]="trainer.birthday"></p>
+    </td>
+    <td [ngClass]="{ red: trainer.team === 'Ruby', yellow: trainer.team === 'FE'}">
+      {{trainer.team}}
+    </td> 
+    <button  (click) = show(i) class="btn btn-primary">Show</button>  
+  </tr>
+</table>
