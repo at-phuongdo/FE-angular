@@ -1,0 +1,25 @@
+.title {
+	text-align: center;
+}
+
+th, tr {
+	border-bottom: 1px solid ;
+}
+th, td {
+	align-content: center;
+}
+.red {
+	color: red;
+}
+
+.yellow {
+	color: yellow;
+}
+
+.empty {
+	color: #cfcfcf;
+}
+
+.btn {
+  margin-top: 30px;
+}
