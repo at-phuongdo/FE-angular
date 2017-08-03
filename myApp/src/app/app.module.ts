@@ -7,6 +7,8 @@ import { EmptyImageDirective } from './directive/emptyImage.directive';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 import { appService } from './service/app.service';
+
+import {HttpModule} from '@angular/http';
 // import { DetailComponent } from './detail/detail.component';
 
 
@@ -20,7 +22,8 @@ import { appService } from './service/app.service';
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [appService],
   bootstrap: [AppComponent]

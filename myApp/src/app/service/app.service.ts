@@ -1,29 +1,16 @@
 import { Injectable } from '@angular/core';
+import {Http, Response } from '@angular/http';
+import 'rxjs/Rx';
 
 @Injectable()
+
 export class appService {
-
-  trainers :any;
-  
-  constructor() {
-    this.trainers = [
-      { 
-        name: "Vi", 
-        birthday: "1-1-1990", 
-        team: "FE"},
-      { avatar: "http://pro654.wap.sh/hinh-nen/ke-cap-mat-trang/minion-27.jpg",
-        name: "Kien", 
-        birthday: "1-1-1992", 
-        team: "Ruby"},
-      { avatar: "http://pro654.wap.sh/hinh-nen/ke-cap-mat-trang/minion-28.jpg",
-        name: "A", 
-        team: "Ruby"},
-    ];
-    // this.trainerInfo = {};
-   
+  trainers: Array<string> = [];
+  constructor(private http: Http) {}
+  getAll() {
+    return this.http.get("../assets/trainer.json").map(res => res.json());
   }
-
-  getDetail(i: number){
-    return this.trainers[i];
+  getDetail(){
+    return this.http.get("../assets/trainer.json").map(res => res.json());
   }
-} 
+}

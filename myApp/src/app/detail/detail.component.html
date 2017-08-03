@@ -1,8 +1,21 @@
-<div class="col-md-4" *ngIf="trainerInfo !=null ">
-  <h2 class="title">Information</h2>
-  <img src="{{trainerInfo.avatar}}" width="100px" height="100px"><br/>
-  <b>Name</b><p>{{trainerInfo.name}}</p>
-  <b>Birthday</b><p [emptyData]="trainerInfo.birthday"></p>
-  <!-- <p>{{trainerInfo.birthday}}</p> -->
-  <b>Team</b><p>{{trainerInfo.team}}</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="col-md-4" *ngIf="trainerInfo !=null ">
+    <h2 class="text-center">Information</h2>
+    <div class="left"> 
+      <span [emptyImage]="trainerInfo.avatar" ></span>
+    </div>
+    <div class="right">
+      <b>Name :</b><span>{{trainerInfo.name}}</span><br>
+      <b>Birthday :</b><span [emptyData]="trainerInfo.birthday"></span><br>
+      <b>Team :</b><span>{{trainerInfo.team}}</span>
+    </div>
+  </div>
+</body>
+</html>
+
