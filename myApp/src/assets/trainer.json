@@ -1,0 +1,20 @@
+ {
+  "trainer": [
+      { 
+        "id": "1",
+        "name": "Vi", 
+        "birthday": "1-1-1990", 
+        "team": "FE"},
+      { 
+        "id": "2",
+        "avatar": "http://pro654.wap.sh/hinh-nen/ke-cap-mat-trang/minion-27.jpg",
+        "name": "Kien", 
+        "birthday": "1-1-1992", 
+        "team": "Ruby"},
+      { 
+        "id":"3",
+        "avatar": "http://pro654.wap.sh/hinh-nen/ke-cap-mat-trang/minion-28.jpg",
+        "name": "A", 
+        "team": "Ruby"}
+  ]
+}

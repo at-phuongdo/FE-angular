@@ -1,0 +1,13 @@
+.left {
+  float: left;
+}
+
+.right {
+  margin : 20px;
+}
+
+.empty {
+  color: #cfcfcf;
+  font-style: italic;
+}
+

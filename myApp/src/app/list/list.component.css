@@ -1,0 +1,17 @@
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.empty {
+  color: #cfcfcf;
+  font-style: italic;
+}
