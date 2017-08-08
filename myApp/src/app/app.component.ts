@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { FormComponent } from './form.component'; 
+import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-root',
