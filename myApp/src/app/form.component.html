@@ -1,0 +1,53 @@
+<div class="container">
+  <form ngNoForm [formGroup]="memberForm" (ngSubmit)="add(memberForm)">
+    <fieldset formGroupName="personal">
+      <div class="form-group">
+       <label> Avatar </label><input type="file" formControlName="avatar" >
+       <label>Name</label><input class="form-control" type="text" formControlName="name" >
+       <label>Birthday</label><input class="form-control" type="date" formControlName="birthday" >
+     </div>
+   </fieldset>
+   <fieldset formGroupName="company">
+    <div class="form-group">
+      <label>Joined </label>
+      <input class="form-control" type="date" formControlName="joined">
+      <label>Team</label>
+      <select formControlName="selectedTeam">
+        <option>None</option>
+        <option *ngFor="let item of teams">
+          {{item}}
+        </option>
+      </select><br>
+      
+    </div>
+  </fieldset>
+  <label>Skill</label>
+  <input class="form-control" type="text" formControlName="skill" value="{{skill}}">
+  <div>
+    <input type="submit" class="btn btn-primary" [disabled]="!memberForm.valid">
+  </div>
+</form>
+
+<div>
+  <p class="text-center">Information</p>
+  <table class="table">
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Joined</th>
+      <th>Team</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let member of list; let id = index ">
+      <td><img src="{{member.personal.avatar}}"></td>
+      <td>{{member.personal.name}}</td>
+      <td>{{member.personal.birthday}}</td>
+      <td>{{member.company.joined}}</td>
+      <td>{{member.company.selectedTeam}}</td>
+      <td><button class="btn btn-primary" (click)="edit(member)">Edit</button></td>
+      <td><button class="btn btn-primary" (click)= "delete(id)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+</div>
