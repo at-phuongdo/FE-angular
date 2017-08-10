@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center">List Articles</h1>
+  <table class="table table-bordered">
+    <tr>
+      <th class="text-center">Id</th>
+      <th class="text-center">Image</th>
+      <th class="text-center">Title</th>
+      <th class="text-center">Content</th>
+      <th class="text-center">Author</th>
+      <th class="text-center" colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let item of articles">
+      <td>{{item.id}}</td>
+      <td class="col-md-6 col-md-4 thumbnail"><img src="{{item.image}}" class="img-responsive"></td>
+      <td>{{item.title}}</td>
+      <td>{{item.content}}</td>
+      <td>{{item.author}}</td>
+      <td><a [routerLink]="['/details',item.id]"><button class="btn btn-primary">Show</button></a></td>
+      <td><a [routerLink]="['/details',item.id,'edit']"><button class="btn btn-primary">Edit</button></a></td>
+    </tr>
+  </table>
+</div>
+<!-- <h1>List Component</h1> -->
