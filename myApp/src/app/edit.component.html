@@ -1,0 +1,15 @@
+<div class="container">
+  <form ngNoForm [formGroup]="articleForm">
+  <!-- <fieldset formGroupName="information"> -->
+    <div class="form-group">
+      <label> Image </label><input type="file" formControlName="image" ><img [src]="imgSrc">
+       <label>Title</label><input class="form-control" type="text" formControlName="title" >
+       <label>Content</label><input class="form-control" type="text" formControlName="content" >
+       <label>Author</label><input class="form-control" type="text" formControlName="author" >
+      </div>
+    <!-- </fieldset> -->
+   <div>
+    <input type="submit" class="btn btn-primary">
+  </div>
+</form>
+</div>
